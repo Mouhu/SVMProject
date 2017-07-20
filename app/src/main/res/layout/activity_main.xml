@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    tools:context="com.example.mouhu.svmproject.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_train_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="采集样本数量"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_train_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_train_num_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_train_num_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_train_num_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_lable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="标记动作"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_lable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_lable_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="静止(0)"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_lable_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="走路(1)"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_lable_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跑步(2)"
+            android:textSize="15sp" />
+    </RadioGroup>
+    
+    <TextView
+        android:id="@+id/tv_acc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="加速度："
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_collection_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="已经采集："
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_accuracy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="准确率："
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_collection"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/sample_off" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="采集"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_train"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/train_off" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="训练"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_test"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/test_off" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_still"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/gait_still_off" />
+
+        <ImageView
+            android:id="@+id/iv_walk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/gait_walk_off" />
+
+        <ImageView
+            android:id="@+id/iv_run"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/gait_run_off" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40px"
+        android:layout_gravity="center_horizontal"
+        android:text="清空目录"
+        android:textSize="15sp"/>
+</LinearLayout>
+
